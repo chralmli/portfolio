@@ -4,6 +4,8 @@
   <AboutSection />
   <SkillsSection />
   <PortfolioSection />
+  <ContactSection />
+  <FooterSection />
 </template>
 
 <script>
@@ -12,6 +14,8 @@ import HomeSection from './components/HomeSection.vue'
 import AboutSection from './components/AboutSection.vue'
 import SkillsSection from './components/SkillsSection.vue'
 import PortfolioSection from './components/PortfolioSection.vue'
+import ContactSection from './components/ContactSection.vue'
+import FooterSection from './components/FooterSection.vue'
 
 export default {
   components: {
@@ -20,6 +24,8 @@ export default {
     AboutSection,
     SkillsSection,
     PortfolioSection,
+    ContactSection,
+    FooterSection,
   },
 };
 </script>

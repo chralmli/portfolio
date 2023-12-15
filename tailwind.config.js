@@ -3,9 +3,18 @@ module.exports = {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
     extend: {
-      filter: {
-        'brightness-70': 'brightness(70%)',
-      }
+      backdropFilter: {
+        'none': 'none',
+        'blur': 'blur(5px)',
+      },
+    },
+  },
+  variants: {
+    extend: {
+      opacity: ['group-hover'],
+      transform: ['group-hover'],
+      rotate: ['group-hover'],
+      backdropFilter: ['group-hover'],
     },
   },
   plugins: [],

@@ -5,11 +5,11 @@
 
             <!-- Projects Grid -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <div v-for="project in projects" :key="project.id" class="project-card group cursor-pointer overflow-hidden relative shadow-lg" @mouseover="rotateCard" @mouseleave="resetCard" :style="{ perspective: '1500px' }">
+                <div v-for="project in projects" :key="project.id" class="project-card transition-transform duration-500 ease-in-out transform hover:rotate-6 group cursor-pointer overflow-hidden relative shadow-lg rounded-2xl" @mouseover="rotateCard" @mouseleave="resetCard" :style="{ perspective: '1500px' }">
                     <img :src="project.image" alt="Project" :class="{'scale-105': isHovered}" :style="isHovered ? 'filter: brightness(70%)' : ''" class="transform group-hover:scale-110 transition-transform transition-filter duration-500 ease-in-out">
-                    <div class="absolute inset-0 bg-black bg-opacity-50-flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
-                        <span class="text-xl font-medium text-white">{{  project.title }}</span>
-                        <a :href="project.url" target="_blank" class="view-project-btn hidden group-hover:flex transition-all duration-300 bg-indigo-600 text-white py-2 px-5 rounded">View Project</a>
+                    <div class="absolute project-title inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out text-xl font-semibold">
+                        <span class="project-title absolute inset-0 z-10 opacity-0 group-hover:opacity-100 text-xl font-medium text-white">{{  project.title }}</span>
+                        <a :href="project.url" target="_blank" class="view-project-btn hidden group-hover:flex transition-all duration-300 text-white py-2 px-5 rounded z-20">View Project</a>
                     </div>
                     <p class="mt-2 text-center">{{  project.description }}</p>
                 </div>
@@ -71,17 +71,21 @@ export default {
 
 @layer {
 
-.view-project-btn {
-    @apply transition-opacity transition-transform duration-300 absolute inset-0 m-auto opacity-0 scale-110;
-}
+    .view-project-btn {
+        @apply flex justify-center items-center inset-0 opacity-0 scale-110 absolute transition-transform duration-300 m-auto;
+    }
 
-.project-card:hover .view-project-btn {
-    @apply flex opacity-100 scale-100;
-}
+    .project-card:hover .view-project-btn {
+        @apply flex opacity-100 scale-100;
+    }
 
-.view-project-btn:hover {
-    @apply bg-indigo-500 shadow-lg;
-}
+    .project-card::after {
+        @apply absolute inset-0 bg-black bg-opacity-50 backdrop-filter backdrop-blur-sm opacity-0 transition-opacity;
+    }
+
+    .project-card:hover::after {
+        @apply opacity-100;
+    }
 }
 
 

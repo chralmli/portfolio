@@ -2,8 +2,7 @@
   <MainNavbar />
   <HomeSection />
   <AboutSection />
-  <SkillsSection />
-  <PortfolioSection />
+  <PortfolioAndSkills />
   <ContactSection />
   <FooterSection />
 </template>
@@ -12,8 +11,7 @@
 import MainNavbar from './components/MainNavbar.vue'
 import HomeSection from './components/HomeSection.vue'
 import AboutSection from './components/AboutSection.vue'
-import SkillsSection from './components/SkillsSection.vue'
-import PortfolioSection from './components/PortfolioSection.vue'
+import PortfolioAndSkills from './components/PortfolioAndSkills.vue'
 import ContactSection from './components/ContactSection.vue'
 import FooterSection from './components/FooterSection.vue'
 
@@ -22,8 +20,7 @@ export default {
     MainNavbar,
     HomeSection,
     AboutSection,
-    SkillsSection,
-    PortfolioSection,
+    PortfolioAndSkills,
     ContactSection,
     FooterSection,
   },

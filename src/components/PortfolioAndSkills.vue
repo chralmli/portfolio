@@ -1,5 +1,27 @@
 <template>
-    <section class="portfolio py-12" id="portfolio">
+    <section class="portfolio py-16" id="portfolio">
+        <div class="container mx-auto px-4 py-16 my-12">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-10">Skills</h2>
+            <p class="text-gray-600 text-center max-w-prose mb-4 mx-auto">
+                Effective communication, problem-solving, teamwork, adaptability, and a strong work ethic are at the core of my professional approach.
+            </p>
+            <!-- Technical Skills -->
+            <div class="technical-skills mb-8">
+                <h3 class="text-2xl text-gray-700 mb-4" data-aos="fade-right">Technical Skills</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Skill Item -->
+                    <div class="skill mb-4" v-for="skill in technicalSkills" :key="skill.name" data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="skill-name text-gray-600 text-lg">{{ skill.name }}</span>
+                            <span class="skill-percentage text-sm font-semibold text-indigo-600">{{ skill.level }}</span>
+                        </div>
+                        <div class="w-full progress-bar bg-gray-200 rounded-full overflow-hidden h-2.5 dark:bg-gray-700">
+                            <div class="progress bg-indigo-500 h-2.5 rounded-full" :style="{ width: '0%' }" :data-level="skill.level + '%'"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold text-center text-gray-800 mb-10">My Work</h2>
 
@@ -8,11 +30,11 @@
                 <div v-for="project in projects" :key="project.id" class="project-wrapper transition-transform duration-500 ease-in-out transform hover:rotate-6 group cursor-pointer overflow-hidden relative shadow-lg rounded-2xl" @mouseover="rotateCard" @mouseleave="resetCard" :style="{ perspective: '1500px' }">
                     
                     <!-- Project Card -->
-                    <div class="project-card relative overflow-hidden shadow-lg rounded-2xl md:pb-0 pb-16">
+                    <div class="project-card relative overflow-hidden shadow-lg rounded-2xl md:pb-0">
                         <img :src="project.image" alt="Project" :class="{'scale-105': isHovered}" :style="isHovered ? 'filter: brightness(60%)' : ''" class="transform group-hover:scale-110 transition-transform transition-filter duration-500 ease-in-out group-hover:blur-sm">
                         
                         <!-- Project Details Overlay -->
-                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out text-xl font-semibold">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 md:bg-opacity-50 flex items-center justify-center md:opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out text-xl font-semibold">
                             <span class="project-title top-4 left-4 absolute inset-0 z-10 opacity-0 group-hover:opacity-100 text-xl font-medium text-white">{{  project.title }}</span>
                             
                             <div class="icon-container absolute mb-8 w-full flex group-hover:flex items-center justify-center rounded z-20">
@@ -35,12 +57,18 @@
 
                         <!-- Mobile buttons -->
                         <div class="mobile-icon-container z-30 bg-white absolute bottom-0 left-0 w-full md:hidden flex justify-center py-2">
-                            <a :href="project.url" target="_blank" class="icon-btn project-link">
-                                <button class="bg-indigo-600 hover:bg-indigo-400 transition ease duration-200 flex mt-5 py-2 px-4 gap-1 text-white rounded"><font-awesome-icon icon="eye" class="text-2xl hover:text-gray-400" />View Project</button>
-                            </a>
-                            <a :href="project.repo" target="_blank" class="icon-btn repo-link">
-                                <button class="bg-gray-600 hover:bg-gray-400 transition duration-200 ease mt-5 rounded py-2 px-4 text flex items-center gap-1 text-white"><font-awesome-icon :icon="['fab', 'github']" class="text-2xl" />Github</button>
-                            </a>
+                            <div class="mobile-content-container flex flex-col items-center justify-center">
+                                <span class="project-title-mobile text-gray-800 font-semibold text-center mb-2">{{ project.title }}</span>
+                                <div class="mobile-btn-wrapper flex flex-row items-center gap-2">
+                                    <a :href="project.url" target="_blank" class="icon-btn project-link">
+                                        <button class="bg-indigo-600 hover:bg-indigo-400 transition ease duration-200 flex py-2 px-4 gap-1 text-white rounded"><font-awesome-icon icon="eye" class="text-2xl hover:text-gray-400" />View Project</button>
+                                    </a>
+                                    <a :href="project.repo" target="_blank" class="icon-btn repo-link">
+                                        <button class="bg-gray-600 hover:bg-gray-400 transition duration-200 ease rounded py-2 px-4 text flex items-center gap-1 text-white"><font-awesome-icon :icon="['fab', 'github']" class="text-2xl" />Github</button>
+                                    </a>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -102,9 +130,40 @@ export default {
                 },
             ],
             selectedProject: null,
+            technicalSkills: [
+                { name: 'HTML', level: 90 },
+                { name: 'CSS', level: 90 },
+                { name: 'JavaScript', level: 80 },
+                { name: 'React.js', level: 75 },
+                { name: 'WordPress', level: 75 },
+                { name: 'Vue.js', level: 65}
+            ],
         };
+
+    },
+    mounted() {
+        this.initObserver();
     },
     methods: {
+        initObserver() {
+            const options = { threshold: 0.1 };
+            this.observer = new IntersectionObserver(this.animateProgress, options);
+            const elements = this.$el.querySelectorAll('.progress');
+
+            elements.forEach(el => {
+                this.observer.observe(el);
+            });
+        },
+        animateProgress(entries, observer) {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const progressBar = entry.target;
+                    const level = progressBar.dataset.level;
+                    progressBar.style.width = level;
+                    observer.unobserve(progressBar);
+                }
+            });
+        },
         rotateCard(event) {
             event.currentTarget.style.transform = 'rotateX(5deg) rotateY(10deg)';
         },
@@ -120,6 +179,11 @@ export default {
             this.selectedProject = null;
         },
     },
+    beforeUnmount() {
+        if (this.observer) {
+            this.observer.disconnect();
+        }
+    }
 };
 </script>
 
@@ -137,7 +201,7 @@ export default {
 
         .project-card {
             position: relative;
-            padding-bottom: 2rem;
+            padding-bottom: 6rem;
         }
 
         .icon-container {

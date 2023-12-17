@@ -61,14 +61,16 @@ export default {
 </script>
 
 <style scoped>
-a.shiny-button {
+.shiny-button {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(0deg, rgba(99, 102, 241, 1) 0%, rgba(164, 105, 221, 1) 100%);
+    @apply bg-indigo-700;
+    transition: background-color 0.3s ease;
     color: fff;
     cursor: pointer;
     display: inline-block;
     outline: none;
+    border: transparent;
 }
 
 a.shiny-button::before {
@@ -82,8 +84,8 @@ a.shiny-button::before {
     z-index: 1000;
 }
 
-a.shiny-button:hover {
-    opacity: 0.7;
+.shiny-button:hover {
+    @apply bg-indigo-600;
 }
 
 a.shiny-button:active {
@@ -99,7 +101,7 @@ a.shiny-button:active {
         opacity: 0;
     }
     80% {
-        transform: scale(0) rotate(45deg);
+        transform: scale(0) rotate(-45deg);
         opacity: 0.5;
     }
     81% {
@@ -114,7 +116,7 @@ a.shiny-button:active {
         opacity: 0;
     }
     80% {
-        -webkit-transform: scale(0) rotate(45deg);
+        -webkit-transform: scale(0) rotate(-45deg);
         opacity: 0.5;
     }
     81% {

@@ -19,9 +19,9 @@
         </transition>
         <div class="overlay" @click="isMenuOpen = false" v-show="isMenuOpen"></div>
         <div class="hamburger md:hidden" @click="toggleMenu($event)">
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
+            <span class="hamburger-line" :class="{'line1': isMenuOpen}"></span>
+            <span class="hamburger-line" :class="{'line2': isMenuOpen}"></span>
+            <span class="hamburger-line" :class="{'line3': isMenuOpen}"></span>
         </div>
     </nav>
 </template>
@@ -65,5 +65,21 @@ export default {
 
 .nav-link:hover {
     @apply text-indigo-500;
+}
+
+.hamburger-line {
+    transition: all 0.3s ease;
+}
+
+.line1 {
+    transform: rotate(45deg) translate(9px, 8px);
+}
+
+.line2 {
+    opacity: 0;
+}
+
+.line3 {
+    transform: rotate(-45deg) translate(8px, -8px);
 }
 </style>

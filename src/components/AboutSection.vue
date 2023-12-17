@@ -1,7 +1,7 @@
 <template>
     <div class="about relative min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-500 to-purple-600" id="about">
         
-        <div class="bio-container absolute inset-0 flex flex-col justify-center items-center z-10">
+        <div class="bio-container inset-0 flex flex-col justify-center items-center z-10">
             <div class="bio-content bg-white/90 backdrop-filter backdrop-blur-xl shadow-xl max-w-4xl mx-auto p-6 rounded-xl md:p-12 transition-all duration-500 ease-in-out transform hover:scale-105" data-aos="fade-up">
                 <h2 class="text-4xl md:text-6xl font-bold text-white">About Me</h2>
                 <p class="text-lg md:text-xl text-gray-100 mt-4 leading-relaxed">

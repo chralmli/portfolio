@@ -1,6 +1,6 @@
 <template>
-    <section class="contact-form p-16 mt-16  bg-gray-50" id="contact">
-        <div class="container mx-auto px-4">
+    <section class="contact-form p-8  bg-gray-50" id="contact">
+        <div class="container mx-auto my-16 px-4">
             <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Contact Me</h2>
             <form @submit.prevent="submitForm" class="max-w-lg mx-auto bg-white p-8 shadow-lg rounded-lg" data-aos="fade-up">
             <div class="mb-6">
@@ -43,6 +43,10 @@ export default {
 </script>
 
 <style scoped>
+
+section#contact {
+    min-height: auto;
+}
 .form-input, .form-textarea {
     @apply w-full p-4 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500 focus:ring-indigo-500 focus:ring-opacity-50 transition ease-in-out;
 }

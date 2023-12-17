@@ -1,4 +1,9 @@
 @layer {
+
+    section {
+        @apply min-h-screen;
+    }
+
     .navbar {
         @apply bg-gray-800 text-gray-50 flex justify-between items-center p-4;
     }

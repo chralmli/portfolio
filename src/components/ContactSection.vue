@@ -1,18 +1,23 @@
 <template>
-    <section class="contact-form py-12" id="contact">
+    <section class="contact-form p-16 mt-16  bg-gray-50" id="contact">
         <div class="container mx-auto px-4">
-            <h2 class="text-4x font-bold text-center text-gray-800 mb-10">Contact Me</h2>
-            <form @submit.prevent="submitForm" class="max-w-lg mx-auto">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Contact Me</h2>
+            <form @submit.prevent="submitForm" class="max-w-lg mx-auto bg-white p-8 shadow-lg rounded-lg" data-aos="fade-up">
             <div class="mb-6">
-                <input v-model="formData.name" type="text" placeholder="Your Name" class="form-input" data-aos="fade-right" data-aos-delay="100">
+                <label for="name" class="block text-sm font-medium text-gray-700"></label>
+                <input v-model="formData.name" type="text" placeholder="Your Name" class="form-input mt-1" data-aos="fade-right" data-aos-delay="100">
             </div>
             <div class="mb-6">
-                <input v-model="formData.email" type="email" placeholder="Your Email" class="form-input" data-aos="fade-right" data-aos-delay="300">
+                <label for="email" class="block text-sm font-medium text-gray-700"></label>
+                <input v-model="formData.email" type="email" placeholder="Your Email" class="form-input mt-1" data-aos="fade-right" data-aos-delay="300">
             </div>
             <div class="mb-6">
-                <textarea v-model="formData.message" placeholder="Your Message" class="form-textarea" data-aos="fade-right" data-aos-delay="600"></textarea>
+                <label for="message" class="block text-sm font-medium text-gray-700"></label>
+                <textarea v-model="formData.message" placeholder="What's on your mind?" class="form-textarea mt-1" data-aos="fade-right" data-aos-delay="600"></textarea>
             </div>
-            <button type="submit" class="submit-btn" data-aos="fade-up" data-aos-delay="400">Send Message</button>
+            <div class="flex justify-center">
+                <button type="submit" class="submit-btn px-10" data-aos="fade-up" data-aos-delay="400">Send Message</button>
+            </div>
         </form>
         </div>
     </section>
@@ -39,11 +44,11 @@ export default {
 
 <style scoped>
 .form-input, .form-textarea {
-    @apply w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 transition ease-in-out;
+    @apply w-full p-4 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500 focus:ring-indigo-500 focus:ring-opacity-50 transition ease-in-out;
 }
 
 .submit-btn {
-    @apply bg-indigo-500 text-white py-3 px-6 rounded-lg hover:bg-indigo-600 transition ease-in-out;
+    @apply bg-indigo-500 text-white py-3 rounded-md hover:bg-indigo-600 transition ease-in-out;
 }
 
 .form-input:focus, .form-textarea:focus {

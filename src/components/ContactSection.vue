@@ -16,7 +16,7 @@
                 <textarea v-model="formData.message" placeholder="Hva har du på hjertet?" class="form-textarea mt-1" data-aos="fade-right" data-aos-delay="600"></textarea>
             </div>
             <div class="flex justify-center">
-                <button type="submit" class="submit-btn px-10" data-aos="fade-up" data-aos-delay="400">Send Message</button>
+                <button type="submit" class="submit-btn px-10" data-aos="fade-up" data-aos-delay="400">Send Melding</button>
             </div>
         </form>
         </div>

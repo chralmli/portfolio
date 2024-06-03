@@ -1,7 +1,7 @@
 <template>
     <section class="portfolio py-16" id="portfolio">
         <div class="container mx-auto px-4 py-16 my-12">
-            <h2 class="text-4xl font-bold text-center text-gray-800 mb-10">Ferdighet</h2>
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-10">Ferdigheter</h2>
             <p class="text-gray-600 text-center max-w-prose mb-4 mx-auto">
                 Effektiv kommunikasjon, problemløsning, samarbeid, tilpasningsevne og en sterk arbeidsmoral er kjernen i min profesjonelle tilnærming.
             </p>

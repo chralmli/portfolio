@@ -16,7 +16,7 @@
                 </p>
                 <div class="mt-6">
                     <!-- Profile picture -->
-                    <img src="..\assets\images\119A7745_11zon.jpeg" alt="Profile Photo" class="rounded-full mx-auto w-40 h-40 md:w-60 md:h-60 border-8 border-purple-300 shadow-2xl transition-all duration-500 ease-in-out transform hover:scale-105 object-cover">
+                    <img src="..\assets\images/profile_img.jpg" alt="Profile Photo" class="rounded-full mx-auto w-40 h-40 md:w-60 md:h-60 border-8 border-purple-300 shadow-2xl transition-all duration-500 ease-in-out transform hover:scale-105 object-cover">
                 </div>
             </div>
         </div>

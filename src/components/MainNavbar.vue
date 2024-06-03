@@ -4,17 +4,17 @@
             <a href="#" class="text-2xl font-bold"><img src="../assets/images/almli-dev-logo.png"></a>
         </div>
         <div class="nav-links md:flex hidden">
-            <a href="#home" class="nav-link">Home</a>
-            <a href="#about" class="nav-link">About</a>
-            <a href="#portfolio" class="nav-link">Portfolio</a>
-            <a href="#contact" class="nav-link">Contact</a>
+            <a href="#home" class="nav-link">Hjem</a>
+            <a href="#about" class="nav-link">Om Meg</a>
+            <a href="#portfolio" class="nav-link">Mine Prosjekter</a>
+            <a href="#contact" class="nav-link">Kontakt Meg</a>
         </div>
         <transition name="sidebar">
             <div class="nav-sidebar" v-show="isMenuOpen">
-                <a href="#home" class="nav-link text-gray-50">Home</a>
-                <a href="#about" class="nav-link text-gray-50">About</a>
-                <a href="#portfolio" class="nav-link text-gray-50">Portfolio</a>
-                <a href="#contact" class="nav-link text-gray-50">Contact</a>
+                <a href="#home" class="nav-link text-gray-50">Hjem</a>
+                <a href="#about" class="nav-link text-gray-50">Om Meg</a>
+                <a href="#portfolio" class="nav-link text-gray-50">Mine Prosjekter</a>
+                <a href="#contact" class="nav-link text-gray-50">Kontakt Meg</a>
             </div>
         </transition>
         <div class="overlay" @click="isMenuOpen = false" v-show="isMenuOpen"></div>

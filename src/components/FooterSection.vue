@@ -3,7 +3,7 @@
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-4 md:mb-0">
-                    <a href="/" class="logo text-2xl font-bold">Almli Dev</a>
+                    <a href="/" class="logo text-2xl font-bold">Almli</a>
                 </div>
 
                 <!-- Footer Links -->

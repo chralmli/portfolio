@@ -7,6 +7,10 @@ module.exports = {
         'none': 'none',
         'blur': 'blur(5px)',
       },
+      fontFamily: {
+        'sans': ['"Nunito"', 'sans-serif'],
+        'serif': ['"Merriweather"', 'serif'],
+      },
     },
   },
   variants: {

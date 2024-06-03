@@ -3,17 +3,16 @@
         
         <div class="bio-container inset-0 flex flex-col justify-center items-center z-10">
             <div class="bio-content bg-white/90 backdrop-filter backdrop-blur-xl shadow-xl max-w-4xl mx-auto p-6 rounded-xl md:p-12 transition-all duration-500 ease-in-out transform hover:scale-105" data-aos="fade-up">
-                <h2 class="text-4xl md:text-6xl font-bold text-white">About Me</h2>
+                <h2 class="text-4xl md:text-6xl font-bold text-white">Om Meg</h2>
                 <p class="text-lg md:text-xl text-gray-100 mt-4 leading-relaxed">
-                    Hello! I'm Christian, an aspiring front-end developer currently immersed in the dynamic world of technology at Noroff. With Steinkjer, Norway, as my backdrop, I'm deeply engaged in mastering the art of crafting intuitive and visually appealing web interfaces. My education is a journey through the ever-evolving landscape of HTML, CSS, JavaScript,
-                    and modern frameworks that are shaping the future of online experiences.
+                    Hei! Jeg heter Christian, og jeg studerer for å bli front-end utvikler på Noroff. Jeg bor i Steinkjer, Norge, og elsker å lære hvordan man lager brukervennlige og flotte nettsider. Jeg lærer meg HTML, CSS, JavaScript og moderne rammeverk som vil forme fremtiden for nettet.
                 </p>
                 <p class="text-lg md:text-xl text-gray-100 mt-4 leading-relaxed">
-                    Driven by a passion for both design and functionality, I approach web development with a meticulous eye for detail and a commitment to creating seamless user experiences. As I navigate through my studies, I'm eager to apply my growing skill set to real-world projects, with a focus on responsive design, interactivity, and performance.
+                    Jeg er lidenskapelig opptatt av både design og funksjonalitet, og jeg liker å lage nettsider som er både pene og enkle å bruke. Mens jeg studerer, gleder jeg meg til å bruke det jeg har lært på ekte prosjekter, med fokus på responsivt design, interaktivitet og ytelse.
                 </p>
                 <p class="text-lg md:text-xl text-gray-100 mt-4 leading-relaxed">
-                    In my quest to become a well-versed front-end developer, I balance my academic endeavors with a healthy lifestyle, ensuring that I bring my best self to every line of code. My goal is to not only make a living from my craft but to contribute innovative solutions to the tech community.
-                    Explore my portfolio to get a glimpse of my journey and the projects that fuel my passion for front-end development.
+                    For å bli en dyktig front-end utvikler, balanserer jeg studiene mine med en sunn livsstil, slik at jeg alltid kan gi mitt beste. Målet mitt er å kunne leve av det jeg elsker, og å bidra med smarte løsninger til teknologisamfunnet.
+                    Ta en titt på porteføljen min for å se reisen min og prosjektene som driver min lidenskap for front-end utvikling.
                 </p>
                 <div class="mt-6">
                     <!-- Profile picture -->

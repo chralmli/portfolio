@@ -1,13 +1,13 @@
 <template>
     <section class="portfolio py-16" id="portfolio">
         <div class="container mx-auto px-4 py-16 my-12">
-            <h2 class="text-4xl font-bold text-center text-gray-800 mb-10">Skills</h2>
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-10">Ferdighet</h2>
             <p class="text-gray-600 text-center max-w-prose mb-4 mx-auto">
-                Effective communication, problem-solving, teamwork, adaptability, and a strong work ethic are at the core of my professional approach.
+                Effektiv kommunikasjon, problemløsning, samarbeid, tilpasningsevne og en sterk arbeidsmoral er kjernen i min profesjonelle tilnærming.
             </p>
             <!-- Technical Skills -->
             <div class="technical-skills mb-8">
-                <h3 class="text-2xl text-gray-700 mb-4" data-aos="fade-right">Technical Skills</h3>
+                <h3 class="text-2xl text-gray-700 mb-4" data-aos="fade-right">Tekniske Ferdigheter</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <!-- Skill Item -->
                     <div class="skill mb-4" v-for="skill in technicalSkills" :key="skill.name" data-aos="fade-up" data-aos-delay="100">
@@ -23,7 +23,7 @@
             </div>
         </div>
         <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center text-gray-800 mb-10">My Work</h2>
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-10">Mine Prosjekter</h2>
 
             <!-- Projects Grid -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10" data-aos="fade-up">
@@ -92,6 +92,8 @@
 import grooveGridImage from '@/assets/images/groove-grid_smartmockups.png';
 import gamehubImage from '@/assets/images/gamehub_smartmockups.png';
 import csmImage from '@/assets/images/csm_smartmockups.png';
+import bandSiteImage from '@/assets/images/band-site_mockup.jpg';
+import auctionSiteImage from '@/assets/images/auction-site_mockup.jpg';
 import Modal from './ModalComponent.vue';
 
 export default {
@@ -107,7 +109,7 @@ export default {
                 {
                     id: 1,
                     title: 'The Groove Grid',
-                    description: 'The Groove Grid is an innovative, user-friendly drumming blog site, developed using HTML, CSS, JavaScript, and WordPress REST API. It features Home, About, Blog, Specific Blog Post, and Contact pages. Key features include a "Latest Posts" section on the Home Page, a Blog Page displaying the first 10 blogs with more loading options, dynamic content on the Blog Specific Page, and a Contact Page with custom JavaScript validation. This project demonstrates advanced web development skills, combining functionality with a passion for drumming.',
+                    description: 'The Groove Grid er et innovativt og brukervennlig trommeblogg-nettsted, utviklet med HTML, CSS, JavaScript og WordPress REST API. Nettstedet har sider for Hjem, Om, Blogg, Spesifikk Bloggpost og Kontakt. Hovedfunksjonene inkluderer en "Siste innlegg" seksjon på Hjem-siden, en Bloggside som viser de første 10 bloggene med flere lastealternativer, dynamisk innhold på den spesifikke bloggsiden, og en Kontaktside med egendefinert JavaScript-validering. Dette prosjektet demonstrerer avanserte webutviklingsferdigheter, og kombinerer funksjonalitet med en lidenskap for trommer.',
                     image: grooveGridImage,
                     url: 'https://taupe-medovik-72ed9d.netlify.app/',
                     repo: 'https://github.com/chralmli/project-exam-1-chralmli',
@@ -115,7 +117,7 @@ export default {
                 {
                     id: 2,
                     title: 'GameHub',
-                    description: 'GameHub offers an interactive shopping experience for gamers, featuring a variety of new and pre-owned games. The website excels in dynamic product management, leveraging the WordPress REST API to showcase products. Customers can browse game listings, view detailed product pages, and utilize a fully functional shopping cart (excluding payment processing). Built with modern web technologies, GameHub exemplifies cutting-edge web development in the e-commerce domain.',
+                    description: 'GameHub tilbyr en interaktiv shoppingopplevelse for gamere, med et utvalg av nye og brukte spill. Nettstedet utmerker seg i dynamisk produktstyring ved å bruke WordPress REST API for å vise frem produkter. Kunder kan bla gjennom spilloppføringer, se detaljerte produktsider og bruke en fullt funksjonell handlekurv (unntatt betalingsbehandling). Bygget med moderne webteknologier, eksemplifiserer GameHub banebrytende webutvikling innen e-handel.',
                     image: gamehubImage,
                     url: 'https://storied-medovik-be5681.netlify.app/',
                     repo: 'https://github.com/chralmli/cross-course-project-gamehub/tree/gamehub-cms-ca',
@@ -123,10 +125,26 @@ export default {
                 {
                     id: 3,
                     title: 'Community Science Museum',
-                    description: 'The Community Science Museum website is a vibrant digital portal designed to engage middle school students and their parents with intriguing educational content. The website showcases the museum\'s exhibits and events through an interactive and accessible interface, adhering to WCAG standards for inclusivity. With a responsive design for seamless browsing on any device, the site is constructed with semantic HTML for structured content and optimized CSS for peak performance.',
+                    description: 'Nettstedet for Community Science Museum er en livlig digital portal designet for å engasjere ungdomsskoleelever og deres foreldre med spennende utdanningsinnhold. Nettstedet viser museets utstillinger og arrangementer gjennom et interaktivt og tilgjengelig grensesnitt, og følger WCAG-standarder for inkludering. Med et responsivt design for sømløs nettlesing på alle enheter, er nettstedet bygget med semantisk HTML for strukturert innhold og optimalisert CSS for best mulig ytelse.',
                     image: csmImage,
                     url: 'https://elaborate-speculoos-c50810.netlify.app/',
                     repo: 'https://github.com/chralmli/semester_project-1/tree/master',
+                },
+                {
+                    id: 4,
+                    title: 'Main Street Revival',
+                    description: 'Dette er det offisielle nettstedet for bandet mitt, bygget med Next.js. Jeg har utviklet en tilpasset musikkspiller fra bunnen av, slik at brukere kan lytte til våre nyeste låter sømløst. Nettstedet har et moderne design med interaktive elementer, som gir en flott brukeropplevelse.',
+                    image: bandSiteImage,
+                    url: 'https://www.msrbandofficial.com/',
+                    repo: 'https://github.com/chralmli/MainStRevivalWebsite/tree/master',
+                },
+                {
+                    id: 5,
+                    title: 'Gavel Glance Auctions',
+                    description: 'Gavel Glance er et auksjonsnettsted som viser min evne til å implementere en API med mange funksjoner. Brukere kan se auksjonslister, registrere seg og logge inn, motta kreditter når en ny bruker registreres, by på gjenstander med kreditter, opprette lister, se bud fra andre brukere, og mye mer. Det er bygget med ren JavaScript, men bruker Vite for bundling og Tailwind CSS for styling.',
+                    image: auctionSiteImage,
+                    url: 'https://gavelglance.netlify.app/#home',
+                    repo: 'https://github.com/chralmli/gavel-glance-SP2',
                 },
             ],
             selectedProject: null,
@@ -134,9 +152,13 @@ export default {
                 { name: 'HTML', level: 90 },
                 { name: 'CSS', level: 90 },
                 { name: 'JavaScript', level: 80 },
-                { name: 'React.js', level: 75 },
+                { name: 'React.js', level: 80 },
+                { name: 'Sass', level: 80 },
+                { name: 'Tailwind CSS', level: 80 },
+                { name: 'Next.js', level: 80 },
                 { name: 'WordPress', level: 75 },
-                { name: 'Vue.js', level: 65}
+                { name: 'Vue.js', level: 75},
+                { name: 'Cypress', level: 75},
             ],
         };
 
